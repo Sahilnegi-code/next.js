@@ -1,5 +1,5 @@
-
-import React from 'react'
+'use client'
+import { button } from 'bootstrap';
 
 const Header = ({setIsAdd}) => {
 
@@ -7,7 +7,7 @@ const Header = ({setIsAdd}) => {
     <>
 
      <div>
-        <h1>Header</h1>
+        <button className='btn btn-primary' onClick={()=>setIsAdd(true)}>Add</button>
      </div>
     
     </>

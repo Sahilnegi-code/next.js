@@ -1,13 +1,4 @@
-// import React from 'react'
-import styles from '@/app/styles/loading.module.css';
-const Loading = () => {
-  return (
-    <div>
-      <div >
-        <div>s</div>
-    </div>
-    </div>
-  )
-}
-
-export default Loading
+export default function loading() {
+    // Or a custom loading skeleton component
+    return <p>'Loading...'</p>
+  }
