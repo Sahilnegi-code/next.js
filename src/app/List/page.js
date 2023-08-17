@@ -1,11 +1,16 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const List = ({data }) => {
+const List = ({data,setEmp, handleEdit, handleDelete }) => {
+
+
+useEffect(()=>{
+
+},[setEmp , handleDelete])
   return (
     <>
     <div>
-    <table class="table">
+    <table className="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -17,6 +22,7 @@ const List = ({data }) => {
   </thead>
   <tbody>
     {
+      data.length !==  0  && (
         data.map((curr, id)=>
         {
             return (
@@ -28,8 +34,8 @@ const List = ({data }) => {
       <td>{curr.email}</td>
       <td>{curr.phone}</td>
       <td>
-        {/* <button>Edit</button>
-        <button>Delete</button> */}
+        <button className='btn btn-primary' onClick={ ()=> handleEdit(curr ) }>Edit</button>{ " " }
+        <button className='btn btn-primary' onClick={()=>handleDelete(curr )}>Delete</button>
       </td>
     </tr>
             </>
@@ -37,7 +43,9 @@ const List = ({data }) => {
         }
             
             )
+      )
     }
+    
   
   </tbody>
 </table>

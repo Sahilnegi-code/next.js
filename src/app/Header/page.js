@@ -6,7 +6,7 @@ const Header = ({setIsAdd}) => {
   return (
     <>
 
-     <div>
+     <div style={{margin:'10px 10px'}}>
         <button className='btn btn-primary' onClick={()=>setIsAdd(true)}>Add</button>
      </div>
     

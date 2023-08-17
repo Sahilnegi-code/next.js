@@ -1,6 +1,12 @@
 @import 'bootstrap/dist/css/bootstrap.css';
-/* @import 'bootstrap/dist/js/bootstrap.bundle.min.js'; */
+
 
 .header{
   border-radius: 2px solid red !important;
+}
+.center_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
